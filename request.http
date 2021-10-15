@@ -4,17 +4,19 @@
 GET {{api}}
 ###
 
-PUT  {{api}}/1
+PUT  {{api}}/6
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZFVzdWFyaW8iOjIsIkdtYWlsIjoiRGVsYXJvc2FAZ21haWwuY29tIiwiUm9sZUlkIjoxLCJpYXQiOjE2MzQyODIzMTZ9.TqR0Y1LY46AmlxjJ7T52ihcSaTxLD8j18IkOo5qfzNg
 
 {
     "Nombre":"Pan sobado",
-    "Cantidad":11
+    "Cantidad":100
 }
 ###
 
 POST  {{api}}
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZFVzdWFyaW8iOjIsIkdtYWlsIjoiRGVsYXJvc2FAZ21haWwuY29tIiwiUm9sZUlkIjoxLCJpYXQiOjE2MzQyODIzMTZ9.TqR0Y1LY46AmlxjJ7T52ihcSaTxLD8j18IkOo5qfzNg
 
 {
     "Nombre":"Agua",
@@ -27,7 +29,7 @@ POST {{login}}/signUp
 Content-Type: application/json
 
 {
-    "Gmail":"Delarosa@gmail.com",
+    "Gmail":"Eduardo@gmail.com",
     "Clave":"godofwar2"
 }
 ###
@@ -35,6 +37,10 @@ POST {{login}}/signIn
 Content-Type: application/json
 
 {
-    "Gmail":"Delarosa@gmail.com",
+    "Gmail":"Eduardo@gmail.com",
     "Clave":"godofwar2"
 }
+###
+GET {{api}}
+
+###
