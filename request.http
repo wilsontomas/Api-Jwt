@@ -1,3 +1,32 @@
 @api = http://localhost:3000/api/product
+@login = http://localhost:3000/api/login
 ###
-GET {{api}} 
+GET {{api}}
+###
+
+PUT  {{api}}/1
+Content-Type: application/json
+
+{
+    "Nombre":"Pan sobado",
+    "Cantidad":11
+}
+###
+
+POST  {{api}}
+Content-Type: application/json
+
+{
+    "Nombre":"Agua",
+    "Cantidad":1
+}
+###
+DELETE {{api}}/1
+###
+POST {{login}}/signUp
+Content-Type: application/json
+
+{
+    "Gmail":"Delarosa@gmail.com",
+    "Clave":"godofwar2"
+}
