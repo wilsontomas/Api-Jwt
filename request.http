@@ -1,5 +1,5 @@
-@api = http://localhost:3000/api/product
-@login = http://localhost:3000/api/login
+@api = http://localhost:3001/api/product
+@login = http://localhost:3001/api/login
 ###
 GET {{api}}
 ###

@@ -20,7 +20,7 @@ let signUp = async(req,res)=>{
         .input('Clave',sql.VarChar(250),ClaveCifrada)
         .execute('addUser');
 
-        res.status(200).json({"Mensaje":"Se agrego el ususario"})
+        res.status(200).json({"Mensaje":"Se agrego el usuario"})
     } catch (error) {
         console.log(error.message)
         res.status(500).json({"mensaje":"Error interno al generar la clave"});
@@ -50,11 +50,15 @@ let signIn=async (req,res)=>{
         
          res.status(200).json({token});
          return;
+    }else{
+        res.status(200).json({"Mensaje":"Usuario invalido"})
     }
 
    
    } catch (error) {
        console.log(error.message)
+       res.status(500).json({"Mensaje":"Error en el signIn"});
+
    }
 
 

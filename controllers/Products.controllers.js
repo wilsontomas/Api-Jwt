@@ -29,6 +29,8 @@ let GetProductsById=async (req,res)=>{
   
       } catch (error) {
           console.log(error)
+          res.status(500).json({"Mensaje":"Error al consultar registro"});
+
       }
 }
 
@@ -50,6 +52,8 @@ let UpdateProductById=async (req,res)=>{
         
       } catch (error) {
           console.log(error)
+          res.status(500).json({"Mensaje":"Error al actualizar el registro"});
+    
       }
 }
 
@@ -69,6 +73,8 @@ let DeleteProductById=async (req,res)=>{
         
       } catch (error) {
           console.log(error)
+          res.status(500).json({"Mensaje":"Error al eliminar el registro"});
+
       }
 }
 
@@ -82,11 +88,13 @@ let CreateProduct=async (req,res)=>{
        .input('Cantidad',sql.Int,Cantidad)
        .execute('CreateProduct');
         console.log("Se ha creado el registro")
-       res.status(200).json({"Mensaje":"Se ha creado el producto"});
+       res.status(201).json({"Mensaje":"Se ha creado el producto"});
     
         
       } catch (error) {
           console.log(error)
+          res.status(500).json({"Mensaje":"Error al crear un registro"});
+
       }
 }
 
